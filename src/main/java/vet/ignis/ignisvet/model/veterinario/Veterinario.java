@@ -1,11 +1,19 @@
 package vet.ignis.ignisvet.model.veterinario;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import vet.ignis.ignisvet.model.endereco.Endereco;
 import vet.ignis.ignisvet.model.endereco.EnderecoDTO;
 
 @Table (name = "veterinarios")
 @Entity (name = "Veterinario")
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
 public class Veterinario {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
