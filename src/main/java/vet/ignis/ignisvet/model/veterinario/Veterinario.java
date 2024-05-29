@@ -29,4 +29,13 @@ public class Veterinario {
 
     @Embedded
     private Endereco endereco;
+
+    public Veterinario(VeterinarioDTO dados) {
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.crmv = dados.crmv();
+        this.celular = dados.celular();
+        this.especialidade = new Especialidade(dados.especialidade());
+        this.endereco = new Endereco(dados.endereco());
+    }
 }
