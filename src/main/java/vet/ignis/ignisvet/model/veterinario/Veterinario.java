@@ -35,7 +35,7 @@ public class Veterinario {
         this.email = dados.email();
         this.crmv = dados.crmv();
         this.celular = dados.celular();
-        this.especialidade = new Especialidade(dados.especialidade());
+        this.especialidade = dados.especialidade();
         this.endereco = new Endereco(dados.endereco());
     }
 }
