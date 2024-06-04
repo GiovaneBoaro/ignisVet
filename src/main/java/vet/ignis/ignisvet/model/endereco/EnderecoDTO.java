@@ -1,4 +1,26 @@
 package vet.ignis.ignisvet.model.endereco;
 
-public record EnderecoDTO(String logradouro, String numero, String complemento, String cidade, String uf, String cep) {
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+
+public record EnderecoDTO (
+
+        @NotBlank
+        String logradouro,
+
+
+        String numero,
+
+
+        String complemento,
+
+        @NotBlank
+        String cidade,
+
+        @NotBlank
+        String uf,
+
+        @NotBlank
+        @Pattern(regexp = "\\d{8}")
+        String cep) {
 }
