@@ -18,6 +18,9 @@ public record EnderecoDTO (
         String cidade,
 
         @NotBlank
+        String bairro,
+
+        @NotBlank
         String uf,
 
         @NotBlank
