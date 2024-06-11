@@ -14,5 +14,4 @@ create table veterinarios (
     cidade varchar(100) not null,
 
     primary key(id)
-
 );
