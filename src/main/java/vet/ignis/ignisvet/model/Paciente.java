@@ -27,4 +27,14 @@ public class Paciente {
     private String emailDono;
     private String telefoneDono;
     private String cpfDono;
+
+    public Paciente(PacienteDTO dados) {
+        this.nomeAnimal = dados.nomeAnimal();
+        this.idadeAnimal = dados.idadeAnimal();
+        this.especieAnimal = dados.especieAnimal();
+        this.nomeDono = dados.nomeDono();
+        this.emailDono = dados.emailDono();
+        this.telefoneDono = dados.telefoneDono();
+        this.cpfDono = dados.cpfDono();
+    }
 }
