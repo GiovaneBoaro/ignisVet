@@ -17,24 +17,24 @@ public class Paciente {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nomeAnimal;
-    private int idadeAnimal;
+    private String nome_animal;
+    private int idade_animal;
 
     @Enumerated(EnumType.STRING)
-    private Especie especieAnimal;
+    private Especie especie_animal;
 
-    private String nomeDono;
-    private String emailDono;
-    private String telefoneDono;
-    private String cpfDono;
+    private String nome_dono;
+    private String email_dono;
+    private String telefone_dono;
+    private String cpf_dono;
 
     public Paciente(PacienteDTO dados) {
-        this.nomeAnimal = dados.nomeAnimal();
-        this.idadeAnimal = dados.idadeAnimal();
-        this.especieAnimal = dados.especieAnimal();
-        this.nomeDono = dados.nomeDono();
-        this.emailDono = dados.emailDono();
-        this.telefoneDono = dados.telefoneDono();
-        this.cpfDono = dados.cpfDono();
+        this.nome_animal = dados.nome_animal();
+        this.idade_animal = dados.idade_animal();
+        this.especie_animal = dados.especie_animal();
+        this.nome_dono = dados.nome_dono();
+        this.email_dono = dados.email_dono();
+        this.telefone_dono = dados.telefone_dono();
+        this.cpf_dono = dados.cpf_dono();
     }
 }

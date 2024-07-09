@@ -4,31 +4,30 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import org.hibernate.validator.constraints.br.CPF;
 
 public record PacienteDTO(
 
         @NotBlank
-        String nomeAnimal,
-
-        @NotBlank
-        int idadeAnimal,
+        String nome_animal,
 
         @NotNull
-        Especie especieAnimal,
+        Integer idade_animal,
+
+        @NotNull
+        Especie especie_animal,
 
         @NotBlank
-        String nomeDono,
+        String nome_dono,
 
         @NotBlank
         @Email
-        String emailDono,
+        String email_dono,
 
         @NotBlank
-        String telefoneDono,
+        String telefone_dono,
 
         @NotBlank
-        @CPF
-        String cpfDono) {
+        @Pattern(regexp = "\\d{11}")
+        String cpf_dono) {
 
 }
