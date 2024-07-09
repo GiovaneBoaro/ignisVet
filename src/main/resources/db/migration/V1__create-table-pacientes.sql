@@ -1,4 +1,4 @@
-create table pacientes {
+create table pacientes (
 
     id bigint not null auto_increment,
     nomeAnimal varchar(100) not null,
@@ -10,5 +10,4 @@ create table pacientes {
     cpfDono varchar(11) not null unique,
 
     primary key(id)
-
-};
+);
