@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import vet.ignis.ignisvet.model.endereco.Endereco;
-import vet.ignis.ignisvet.model.endereco.EnderecoDTO;
 
 @Table (name = "veterinarios")
 @Entity (name = "Veterinario")
@@ -30,7 +29,7 @@ public class Veterinario {
     @Embedded
     private Endereco endereco;
 
-    public Veterinario(VeterinarioDTO dados) {
+    public Veterinario(CadastroVeterinarioDTO dados) {
         this.nome = dados.nome();
         this.email = dados.email();
         this.crmv = dados.crmv();

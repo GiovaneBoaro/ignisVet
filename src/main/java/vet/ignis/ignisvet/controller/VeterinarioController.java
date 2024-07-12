@@ -4,10 +4,9 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import vet.ignis.ignisvet.model.endereco.Endereco;
 import vet.ignis.ignisvet.model.veterinario.ListagemVeterinarioDTO;
 import vet.ignis.ignisvet.model.veterinario.Veterinario;
-import vet.ignis.ignisvet.model.veterinario.VeterinarioDTO;
+import vet.ignis.ignisvet.model.veterinario.CadastroVeterinarioDTO;
 import vet.ignis.ignisvet.repository.VeterinarioRepository;
 
 import java.util.List;
@@ -22,7 +21,7 @@ public class VeterinarioController {
 
     @PostMapping
     @Transactional
-    public void cadastrar(@RequestBody @Valid VeterinarioDTO dados) {
+    public void cadastrar(@RequestBody @Valid CadastroVeterinarioDTO dados) {
         repository.save(new Veterinario(dados));
     }
 

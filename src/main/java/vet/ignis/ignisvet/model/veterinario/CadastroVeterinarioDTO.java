@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import vet.ignis.ignisvet.model.endereco.EnderecoDTO;
 
-public record VeterinarioDTO(
+public record CadastroVeterinarioDTO(
 
         @NotBlank
         String nome,
