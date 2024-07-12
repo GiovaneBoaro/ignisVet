@@ -28,7 +28,7 @@ public class VeterinarioController {
 
     @GetMapping
     public List<ListagemVeterinarioDTO> listar() {
-        return repository.findAll();
+        return repository.findAll().stream().map(ListagemVeterinarioDTO::new).toList();
     }
 
 }
