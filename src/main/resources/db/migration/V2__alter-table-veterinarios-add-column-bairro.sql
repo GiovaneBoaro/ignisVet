@@ -1,0 +1,1 @@
+alter table veterinarios add bairro varchar(100) not null;
