@@ -2,14 +2,14 @@ package vet.ignis.ignisvet.controller;
 
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import vet.ignis.ignisvet.model.ListagemPacienteDTO;
 import vet.ignis.ignisvet.model.Paciente;
 import vet.ignis.ignisvet.model.CadastroPacienteDTO;
 import vet.ignis.ignisvet.repository.PacienteRepository;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("pacientes")
@@ -25,8 +25,8 @@ public class PacienteController {
     }
 
     @GetMapping
-    public List<ListagemPacienteDTO> listar() {
-        return repository.findAll().stream().map(ListagemPacienteDTO::new).toList();
+    public Page<ListagemPacienteDTO> listar(Pageable paginacao) {
+        return repository.findAll(paginacao).map(ListagemPacienteDTO::new);
     }
 
 }
