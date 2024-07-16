@@ -28,7 +28,7 @@ public class Paciente {
     private String telefone_dono;
     private String cpf_dono;
 
-    public Paciente(PacienteDTO dados) {
+    public Paciente(CadastroPacienteDTO dados) {
         this.nome_animal = dados.nome_animal();
         this.idade_animal = dados.idade_animal();
         this.especie_animal = dados.especie_animal();

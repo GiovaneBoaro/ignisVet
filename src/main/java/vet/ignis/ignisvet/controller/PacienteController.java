@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import vet.ignis.ignisvet.model.ListagemPacienteDTO;
 import vet.ignis.ignisvet.model.Paciente;
-import vet.ignis.ignisvet.model.PacienteDTO;
+import vet.ignis.ignisvet.model.CadastroPacienteDTO;
 import vet.ignis.ignisvet.repository.PacienteRepository;
 
 import java.util.List;
@@ -20,7 +20,7 @@ public class PacienteController {
 
     @PostMapping
     @Transactional
-    public void cadastrar(@RequestBody @Valid PacienteDTO dados) {
+    public void cadastrar(@RequestBody @Valid CadastroPacienteDTO dados) {
         repository.save(new Paciente(dados));
     }
 
