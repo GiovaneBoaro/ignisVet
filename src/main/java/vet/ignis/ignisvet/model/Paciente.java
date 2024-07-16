@@ -17,11 +17,11 @@ public class Paciente {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome_animal;
-    private int idade_animal;
-
     @Enumerated(EnumType.STRING)
     private Especie especie_animal;
+
+    private String nome_animal;
+    private int idade_animal;
 
     private String nome_dono;
     private String email_dono;

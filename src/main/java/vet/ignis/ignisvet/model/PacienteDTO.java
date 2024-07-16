@@ -29,5 +29,4 @@ public record PacienteDTO(
         @NotBlank
         @Pattern(regexp = "\\d{11}")
         String cpf_dono) {
-
 }
