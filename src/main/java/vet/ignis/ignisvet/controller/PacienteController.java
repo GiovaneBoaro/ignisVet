@@ -26,7 +26,7 @@ public class PacienteController {
 
     @GetMapping
     public List<ListagemPacienteDTO> listar() {
-        return repository.findAll();
+        return repository.findAll().stream().map(ListagemPacienteDTO::new).toList();
     }
 
 }
